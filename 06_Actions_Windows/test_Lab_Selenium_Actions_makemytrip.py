@@ -1,0 +1,52 @@
+import allure
+from selenium import webdriver
+from selenium.webdriver.edge.options import Options
+import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.action_chains import ActionChains, ActionBuilder
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.actions.mouse_button import MouseButton
+from allure_commons.types import AttachmentType
+
+@allure.title("Make My Trip Automation")
+@allure.description("Verify Make My Trip Automation by using Action Classes")
+def test_verify_action_makemytrip():
+    # Set up Edge options
+    edge_options = webdriver.EdgeOptions()
+    edge_options.add_argument("--inprivate")  # Equivalent to Chrome's --incognito for Edge
+
+    # Initialize Edge WebDriver
+    driver = webdriver.Edge(options=edge_options)
+    driver.get("https://www.makemytrip.com/")
+    driver.maximize_window()
+
+    # Wait for the close modal button to be visible
+    WebDriverWait(driver=driver, timeout=5).until(
+        EC.visibility_of_element_located((By.XPATH, "//span[@data-cy='closeModal']"))
+    )
+
+    # Click the close modal button
+    driver.find_element(By.XPATH, "//span[@data-cy='closeModal']").click()
+
+    time.sleep(2)
+
+    # Locate the 'fromCity' input field
+    fromCity = driver.find_element(By.ID, "fromCity")
+
+    # Perform actions to click and type 'del' in the fromCity field
+    actions = ActionChains(driver=driver)
+    actions.move_to_element(fromCity).click().send_keys("del").perform()
+
+    time.sleep(2)
+
+    # Simulate arrow down and enter key presses
+    actions.move_to_element(fromCity).key_down(Keys.ARROW_DOWN).key_down(Keys.ENTER).perform()
+
+    # Attach screenshot to Allure report
+    allure.attach(driver.get_screenshot_as_png(), name="test_verify_action_makemytrip-screenshot", attachment_type=AttachmentType.PNG)
+
+    time.sleep(10)
+    driver.quit()
