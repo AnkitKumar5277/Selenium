@@ -5,19 +5,12 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-
-
 def test_katalon_chrome():
-
-
     chrome_options = Options()
     chrome_options.add_argument("--incognito")
     # chrome_options.add_argument("--start-maximized")
     # chrome_options.add_argument("--window-size=900,600")
-    chrome_options.add_argument("--headless")
-
-
-
+    chrome_options.add_argument("--headless") # run in background without open window
     driver = webdriver.Chrome(chrome_options)
     driver.get("https://katalon-demo-cura.herokuapp.com/")
 
@@ -38,4 +31,5 @@ def test_katalon_chrome():
 
     time.sleep(5)
     driver.quit()  # close everything.
+
 
