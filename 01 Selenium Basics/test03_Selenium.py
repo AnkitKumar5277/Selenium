@@ -1,15 +1,14 @@
-import time
 from selenium import webdriver
 import allure
 import pytest
+import time
 
-@allure.title("open the app.vwo.com")
-@pytest.mark.regression
-
-def test_vwo_login():
+def test_katalon_firefox():
     driver = webdriver.Edge()
-    driver.get("https://app.vwo.com")
-    print(driver.session_id)
+    driver.get("https://katalon-demo-cura.herokuapp.com/")
+    time.sleep(10)
+    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/"
+    driver.quit()
 
 # pytest main.py --alluredir=reports
 # allure serve reports
@@ -52,5 +51,6 @@ def test_espocrm_sample():
 
 # pytest -s main.py --alluredir=reports
 # allure serve reports
+
 
 
