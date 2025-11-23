@@ -22,4 +22,5 @@ def test_katalon_chrome():
     time.sleep(10)
     assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/"
 
-# pytest Folder_1/test05_Selenium_Commands.py --alluredir=./allure-results
+# pytest main.py --alluredir=reports
+# allure serve reports
