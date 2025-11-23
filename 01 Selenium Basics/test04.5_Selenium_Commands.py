@@ -1,5 +1,3 @@
-
-
 from selenium import webdriver
 import allure
 import pytest
@@ -11,7 +9,5 @@ def test_vwo_sample():
     print(driver.title)
     assert driver.title == "Login - VWO"
 
-
-# pytest Folder_1/test04_Selenium_3_Demo.py --alluredir=./allure-results
-
-# allure serve allure-results
+# pytest main --alluredir=reports
+# allure serve reports
