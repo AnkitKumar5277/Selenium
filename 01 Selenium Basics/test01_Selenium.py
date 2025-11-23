@@ -10,5 +10,6 @@ def test_vwo_login():
     driver.get("https:/app.vwo.com")
     time.sleep(15)
 
-    # pytest main --alluredir=reports
-    # allure serve reports
+
+# pytest main --alluredir=reports
+# allure serve reports
