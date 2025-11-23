@@ -10,6 +10,5 @@ def test_vwo_login():
     driver.get("https:/app.vwo.com")
     time.sleep(15)
 
-    # pytest C:\Users\Ankit Kumar\PycharmProjects\Focus\Folder_1\test01_Selenium.py --alluredir=./allure-results
-
-    # allure serve allure-results
+    # pytest main --alluredir=reports
+    # allure serve reports
