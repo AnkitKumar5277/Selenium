@@ -19,7 +19,6 @@ def test_app_vwo_login_edge():
     driver = webdriver.Edge(options=edge_options)  # Changed to Edge
     driver.get(os.getenv("URL"))
 
-    # 1. Find the email and enter the wrong username or email
     email_web_element = driver.find_element(By.ID, "login-username")
     email_web_element.send_keys(os.getenv("INVALID_USERNAME"))
 
@@ -42,3 +41,4 @@ def test_app_vwo_login_edge():
     driver.quit()
 
 # pytest -s Locators/test11_Selenium_locators_miniproject_Edge.py --alluredir=./allure-results
+
