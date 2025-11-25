@@ -32,3 +32,7 @@ def test_load_espo_crm_sales_pack():
     assert driver.current_url == expected_url
     time.sleep(5)
     driver.quit()
+
+
+    # pytest -s Locators/task04_Verify_Sales_Pack_Button_Edge.py --alluredir=./allure-results
+    # allure serve allure-results
