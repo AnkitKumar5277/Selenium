@@ -33,9 +33,14 @@ def test_load_espo_crm_advanced_pack():
     expected_url = "https://www.espocrm.com/extensions/advanced-pack/"
     assert driver.current_url == expected_url
 
+    #     time.sleep(3)
+    # expected_url = "https://www.espocrm.com/extensions/advanced-pack/"
+    # assert driver.current_url == expected_url, f"Expected URL {expected_url}, but got {driver.current_url}"
+
     time.sleep(5)
     driver.quit()
 
 # pytest -s Locators/task03_Verify_Advance_Pack_Button.py --alluredir=./allure-results
 
 # allure serve allure-results
+
