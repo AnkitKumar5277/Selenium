@@ -22,7 +22,7 @@ def test_load_espo_crm_advanced_pack():
     advance_pack_web_element.click()
 
     time.sleep(3)
-
+# “Agar click se new tab open hua hai, toh Selenium us tab me switch ho jaye.”
     main_window = driver.current_window_handle
     for window_handle in driver.window_handles:
         if window_handle != main_window:
@@ -37,4 +37,5 @@ def test_load_espo_crm_advanced_pack():
     driver.quit()
 
 # pytest -s Locators/task03_Verify_Advance_Pack_Button.py --alluredir=./allure-results
+
 # allure serve allure-results
