@@ -35,6 +35,8 @@ def test_load_espo_crm_login():
     time.sleep(5)
     driver.quit()
 
+# pytest -s Locators/task02_Verify_Login_Edge.py --alluredir=./allure-results
+# allure serve allure-results
 
 
 
