@@ -7,7 +7,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import StaleElementReferenceException
 import time
 
-
 @allure.title("stale_element")
 @allure.description("stale_element")
 def test_stale_element_exp_demo():
@@ -39,4 +38,5 @@ def test_stale_element_exp_demo():
 
 # To run the script, you would typically call the function directly
 # or use a test runner like pytest.
+
 # test_stale_element_exp_demo()
