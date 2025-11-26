@@ -36,3 +36,4 @@ def test_load_espo_crm_sales_pack():
 
     # pytest -s Locators/task04_Verify_Sales_Pack_Button_Edge.py --alluredir=./allure-results
     # allure serve allure-results
+
