@@ -26,4 +26,5 @@ def test_verify_svg():
             state.click()
             break
 
+
     time.sleep(5)
