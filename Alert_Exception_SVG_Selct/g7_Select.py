@@ -20,4 +20,5 @@ def test_alerts_js_alert():
     select.select_by_visible_text("Option 1")
     select.select_by_index(1)
 
+
     time.sleep(5)
