@@ -28,4 +28,5 @@ def test_verify_action_keyboard():
      )
 
     time.sleep(10)
+
     driver.quit()
