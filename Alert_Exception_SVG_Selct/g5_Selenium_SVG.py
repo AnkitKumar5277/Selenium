@@ -24,3 +24,4 @@ def test_alerts_js_alert():
 
 
     time.sleep(5)
+
