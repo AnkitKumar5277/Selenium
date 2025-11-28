@@ -39,3 +39,4 @@ about_tab.click()
 
 # Close browser
 driver.quit()
+
