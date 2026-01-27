@@ -37,3 +37,5 @@ def test_verify_action_windows():
         if "New Window" in driver.page_source:
             print("Test Case Passed")
             break
+
+# 👉 Ye code verify karta hai ki "Click Here" link pe click karne se new window open hoti hai ya nahi, aur uspe switch karke content check karta hai.
