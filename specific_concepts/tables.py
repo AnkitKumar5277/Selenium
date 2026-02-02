@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
 # Step 1: Launch browser
 driver = webdriver.Chrome()
 driver.get("https://www.w3schools.com/html/html_tables.asp")
@@ -21,3 +20,4 @@ for row in rows:
     print()  # new line after each row
 
 driver.quit()
+
