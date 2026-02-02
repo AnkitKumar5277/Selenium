@@ -10,6 +10,6 @@ tooltip_element = driver.find_element("xpath", "//a[text()='W3Schools']")
 tooltip_text = tooltip_element.get_attribute("title")
 
 print("Tooltip is:", tooltip_text)
-
 time.sleep(100)
 driver.quit()
+
